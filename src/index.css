@@ -518,6 +518,20 @@ button {
   transform: scale(1.04);
 }
 
+/* Desktop: crossfade to the side view on hover */
+.product-card-img--hover {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.45s ease, transform 0.6s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .product-card-link:hover .product-card-img--hover {
+    opacity: 1;
+  }
+}
+
 .product-card-placeholder {
   height: 100%;
   display: flex;
