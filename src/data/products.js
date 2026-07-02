@@ -77,13 +77,25 @@ export const products = [
   {
     id: 'the-statesman',
     name: 'The Statesman',
-    subtitle: 'Grey Prince of Wales Check',
+    subtitle: 'Grey Windowpane Check',
     price: 1195,
-    tag: 'Coming Soon',
-    description: 'A heritage check recut for the modern silhouette.',
-    details: {},
-    images: [],
-    comingSoon: true,
+    tag: 'New',
+    description:
+      'A heritage check recut for the modern silhouette. Light grey with a blue windowpane overcheck — as sharp worn open-collared as it is with a tie, from the racecourse to the boardroom.',
+    details: {
+      'Fabric & Construction':
+        'Super 120s grey wool with a blue windowpane overcheck, pattern-matched at every seam. Half-canvassed construction, notch lapel, two-button front, dual vents.',
+      'The Fit':
+        'Athletic tailored fit. Accommodating through chest and thigh, sharply suppressed waist. Trousers sit at the natural waist with a tapered leg.',
+      'Delivery & Returns':
+        'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
+    },
+    images: [
+      '/images/statesman-front.jpg',
+      '/images/statesman-side.jpg',
+      '/images/statesman-back.jpg',
+    ],
+    comingSoon: false,
   },
   {
     id: 'the-regent',
