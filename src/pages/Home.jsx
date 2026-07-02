@@ -10,7 +10,8 @@ const features = [
 ]
 
 export default function Home() {
-  const featured = products.slice(0, 3)
+  // 3 shown on desktop (3-up row); the 4th appears on mobile's 2×2 grid
+  const featured = products.slice(0, 4)
 
   return (
     <main>
@@ -66,7 +67,7 @@ export default function Home() {
               View All <span className="btn-arrow">→</span>
             </Link>
           </div>
-          <div className="product-grid">
+          <div className="product-grid product-grid--featured">
             {featured.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}

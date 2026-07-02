@@ -29,8 +29,9 @@ export default function Navbar() {
   }, [menuOpen])
 
   return (
-    <header className={`navbar${scrolled ? ' navbar--solid' : ''}`}>
-      <div className="navbar-inner container">
+    <>
+      <header className={`navbar${scrolled ? ' navbar--solid' : ''}`}>
+        <div className="navbar-inner container">
         <Link to="/" className="navbar-logo" aria-label="SUITD × GYM SKIN home">
           <BrandLockup compact />
         </Link>
@@ -58,8 +59,11 @@ export default function Navbar() {
             <span />
           </button>
         </div>
-      </div>
+        </div>
+      </header>
 
+      {/* Outside the header: its backdrop-filter would otherwise trap this
+          fixed overlay inside the 76px navbar box */}
       <div className={`mobile-menu${menuOpen ? ' mobile-menu--open' : ''}`}>
         <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close menu">
           <IconClose />
@@ -78,6 +82,6 @@ export default function Navbar() {
         <div className="gold-rule" />
         <p className="mobile-menu-tag">Power. Precision. Presence.</p>
       </div>
-    </header>
+    </>
   )
 }
