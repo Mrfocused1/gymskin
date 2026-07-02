@@ -32,7 +32,6 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' navbar--solid' : ''}`}>
       <div className="navbar-inner container">
         <Link to="/" className="navbar-logo" aria-label="SUITD × GYM SKIN home">
-          <MonogramS size={30} />
           <BrandLockup compact />
         </Link>
 
