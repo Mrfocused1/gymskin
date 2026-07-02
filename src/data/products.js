@@ -33,11 +33,19 @@ export const products = [
     name: 'The Executive',
     subtitle: 'Charcoal Single-Breasted',
     price: 1145,
-    tag: 'Coming Soon',
-    description: 'A single-breasted charcoal staple, engineered for the boardroom.',
-    details: {},
-    images: [],
-    comingSoon: true,
+    tag: 'New',
+    description:
+      'The boardroom staple, rebuilt for an athletic frame. A single-breasted charcoal two-piece with a clean notch lapel and two-button front — sharp through the shoulder, suppressed at the waist, with a tapered trouser to match.',
+    details: {
+      'Fabric & Construction':
+        'Super 120s charcoal wool. Half-canvassed construction, notch lapel, two-button front, horn buttons, dual vents. Lined in breathable cupro.',
+      'The Fit':
+        'Athletic tailored fit. Accommodating through chest and thigh, sharply suppressed waist. Trousers sit at the natural waist with a tapered leg.',
+      'Delivery & Returns':
+        'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
+    },
+    images: ['/images/executive-front.jpg'],
+    comingSoon: false,
   },
   {
     id: 'the-monarch',
