@@ -76,13 +76,25 @@ export const products = [
   {
     id: 'the-regent',
     name: 'The Regent',
-    subtitle: 'Midnight Three-Piece',
+    subtitle: 'Sky Blue Three-Piece',
     price: 1395,
-    tag: 'Coming Soon',
-    description: 'Three-piece midnight tailoring for full command of the room.',
-    details: {},
-    images: [],
-    comingSoon: true,
+    tag: 'New',
+    description:
+      'Three-piece tailoring for full command of the room. A sky blue suit with a matching waistcoat and notch lapel — summer-wedding ready, cut athletic through the shoulder and clean through the waist.',
+    details: {
+      'Fabric & Construction':
+        'Super 120s sky blue wool. Half-canvassed jacket, notch lapel, two-button front, five-button waistcoat, dual vents. Lined in breathable cupro.',
+      'The Fit':
+        'Athletic tailored fit across all three pieces. Accommodating through chest and thigh, sharply suppressed waist. Trousers sit at the natural waist with a tapered leg.',
+      'Delivery & Returns':
+        'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
+    },
+    images: [
+      '/images/regent-front.jpg',
+      '/images/regent-side.jpg',
+      '/images/regent-back.jpg',
+    ],
+    comingSoon: false,
   },
   {
     id: 'the-apex',
