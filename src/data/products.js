@@ -44,7 +44,11 @@ export const products = [
       'Delivery & Returns':
         'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
     },
-    images: ['/images/executive-front.jpg'],
+    images: [
+      '/images/executive-front.jpg',
+      '/images/executive-side.jpg',
+      '/images/executive-back.jpg',
+    ],
     comingSoon: false,
   },
   {
