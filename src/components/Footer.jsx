@@ -29,14 +29,6 @@ export default function Footer() {
           <Link to="/product/the-sovereign">The Sovereign</Link>
         </div>
 
-        <div className="footer-col">
-          <h4 className="footer-heading">Client Care</h4>
-          <a href="#!">Size Guide</a>
-          <a href="#!">Delivery &amp; Returns</a>
-          <a href="#!">Alterations</a>
-          <a href="#!">Contact</a>
-        </div>
-
         <div className="footer-col footer-newsletter">
           <h4 className="footer-heading">Join the List</h4>
           <p>First access to new releases and private fittings.</p>
