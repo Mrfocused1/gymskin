@@ -1329,7 +1329,32 @@ button {
   }
 
   .product-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem 0.9rem;
+  }
+
+  .product-card-name {
+    font-size: 1.1rem;
+  }
+
+  .product-card-subtitle {
+    font-size: 0.56rem;
+    letter-spacing: 0.2em;
+  }
+
+  .product-card-price {
+    font-size: 0.75rem;
+  }
+
+  .product-card-tag {
+    top: 8px;
+    left: 8px;
+    font-size: 0.52rem;
+    padding: 0.3rem 0.5rem;
+  }
+
+  .product-card-placeholder span {
+    font-size: 0.52rem;
   }
 
   .footer-grid {
