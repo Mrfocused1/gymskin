@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { BrandLockup, MonogramS } from './Icons'
+import { BrandLockup } from './Icons'
 
 export default function Footer() {
   const [email, setEmail] = useState('')
@@ -15,7 +15,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-grid">
         <div className="footer-brand">
-          <MonogramS size={40} />
           <BrandLockup />
           <p className="footer-tagline">
             Tailored performance. Engineered confidence. Designed to elevate every

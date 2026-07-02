@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
-import { BrandLockup, IconBag, IconClose, MonogramS } from './Icons'
+import { BrandLockup, IconBag, IconClose } from './Icons'
 
 const links = [
   { to: '/', label: 'Home' },
@@ -64,7 +64,6 @@ export default function Navbar() {
         <button className="mobile-menu-close" onClick={() => setMenuOpen(false)} aria-label="Close menu">
           <IconClose />
         </button>
-        <MonogramS size={44} />
         {links.map((l) => (
           <NavLink
             key={l.to}
