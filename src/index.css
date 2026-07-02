@@ -715,8 +715,9 @@ button {
 
 .pdp-grid {
   display: grid;
-  /* cap the gallery so the 2:3 image stays a sensible size on desktop */
-  grid-template-columns: minmax(0, 470px) 1fr;
+  /* gallery width derived from viewport height so the full 2:3 image
+     fits on screen without scrolling (300px ≈ nav + breadcrumb + margin) */
+  grid-template-columns: minmax(0, min(470px, calc((100vh - 300px) * 2 / 3))) 1fr;
   gap: 4.5rem;
   align-items: start;
 }
