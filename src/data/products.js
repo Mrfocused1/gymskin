@@ -56,11 +56,23 @@ export const products = [
     name: 'The Monarch',
     subtitle: 'Black Peak-Lapel Tuxedo',
     price: 1495,
-    tag: 'Coming Soon',
-    description: 'Evening tailoring with presence. Silk-faced peak lapels.',
-    details: {},
-    images: [],
-    comingSoon: true,
+    tag: 'New',
+    description:
+      'Evening tailoring with presence. A black one-button tuxedo with satin-faced peak lapels and a satin side-stripe trouser — cut for an athletic build so black tie fits the way it was always meant to.',
+    details: {
+      'Fabric & Construction':
+        'Super 130s black wool with silk satin facings. Half-canvassed construction, satin peak lapel, covered one-button front, jetted pockets, satin trouser stripe.',
+      'The Fit':
+        'Athletic tailored fit. Accommodating through chest and thigh, sharply suppressed waist. Trousers sit at the natural waist with a tapered leg.',
+      'Delivery & Returns':
+        'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
+    },
+    images: [
+      '/images/monarch-front.jpg',
+      '/images/monarch-side.jpg',
+      '/images/monarch-back.jpg',
+    ],
+    comingSoon: false,
   },
   {
     id: 'the-statesman',
