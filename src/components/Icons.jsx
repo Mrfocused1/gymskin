@@ -97,6 +97,15 @@ export function IconBag({ size = 22 }) {
   )
 }
 
+export function IconZoom({ size = 20 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 22 22" aria-hidden="true" {...iconProps} stroke="currentColor">
+      <circle cx="9.5" cy="9.5" r="6.5" />
+      <path d="M14.5 14.5 20 20M6.5 9.5h6M9.5 6.5v6" />
+    </svg>
+  )
+}
+
 export function IconClose({ size = 20 }) {
   return (
     <svg width={size} height={size} viewBox="0 0 20 20" aria-hidden="true" {...iconProps} stroke="currentColor">

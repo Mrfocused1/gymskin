@@ -1,6 +1,7 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ProductCard from '../components/ProductCard'
+import { IconClose, IconZoom } from '../components/Icons'
 import { useCart } from '../context/CartContext'
 import { formatPrice, getProduct, products, SIZES } from '../data/products'
 
@@ -13,6 +14,18 @@ export default function Product() {
   const [size, setSize] = useState(null)
   const [sizeError, setSizeError] = useState(false)
   const [openPanel, setOpenPanel] = useState('Fabric & Construction')
+  const [zoomOpen, setZoomOpen] = useState(false)
+
+  useEffect(() => {
+    if (!zoomOpen) return
+    const onKey = (e) => e.key === 'Escape' && setZoomOpen(false)
+    window.addEventListener('keydown', onKey)
+    document.body.style.overflow = 'hidden'
+    return () => {
+      window.removeEventListener('keydown', onKey)
+      document.body.style.overflow = ''
+    }
+  }, [zoomOpen])
 
   if (!product || product.comingSoon) {
     return (
@@ -59,6 +72,13 @@ export default function Product() {
                 src={product.images[activeImage]}
                 alt={`${product.name} — view ${activeImage + 1}`}
               />
+              <button
+                className="pdp-zoom-btn"
+                onClick={() => setZoomOpen(true)}
+                aria-label="Zoom image"
+              >
+                <IconZoom />
+              </button>
             </div>
             <div className="pdp-thumbs">
               {product.images.map((src, i) => (
@@ -133,6 +153,24 @@ export default function Product() {
             </div>
           </div>
         </div>
+
+        {zoomOpen && (
+          <div
+            className="lightbox"
+            role="dialog"
+            aria-label={`${product.name} zoomed image`}
+            onClick={() => setZoomOpen(false)}
+          >
+            <button className="lightbox-close" aria-label="Close zoom">
+              <IconClose size={26} />
+            </button>
+            <img
+              src={product.images[activeImage]}
+              alt={`${product.name} — zoomed view`}
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+        )}
 
         {/* More from the collection */}
         <section className="section">
