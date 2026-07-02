@@ -125,11 +125,23 @@ export const products = [
     name: 'The Apex',
     subtitle: 'Stone Summer Suit',
     price: 1045,
-    tag: 'Coming Soon',
-    description: 'Featherweight stone wool-linen for warm-weather precision.',
-    details: {},
-    images: [],
-    comingSoon: true,
+    tag: 'New',
+    description:
+      'Featherweight stone tailoring for warm-weather precision. A cream two-button suit with tonal horn buttons — worn open-collared with tan leather, it owns every summer occasion from the terrace to the aisle.',
+    details: {
+      'Fabric & Construction':
+        'Featherweight stone wool-linen blend. Half-canvassed construction, notch lapel, two-button front, tonal horn buttons, dual vents. Half-lined for breathability.',
+      'The Fit':
+        'Athletic tailored fit. Accommodating through chest and thigh, sharply suppressed waist. Trousers sit at the natural waist with a tapered leg.',
+      'Delivery & Returns':
+        'Complimentary express delivery. 30-day returns on unworn garments. Complimentary first alteration at our atelier partners.',
+    },
+    images: [
+      '/images/apex-front.jpg',
+      '/images/apex-side.jpg',
+      '/images/apex-back.jpg',
+    ],
+    comingSoon: false,
   },
 ]
 
