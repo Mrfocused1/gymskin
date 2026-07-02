@@ -1201,35 +1201,81 @@ button {
 /* ---------------- responsive ---------------- */
 
 @media (max-width: 980px) {
+  /* Full-bleed image hero with copy overlaid at the bottom, per the mobile mockup */
+  .hero {
+    min-height: 100svh;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
-    padding-top: calc(var(--nav-h) + 2rem);
-  }
-
-  .hero {
-    min-height: 0;
-  }
-
-  .hero-copy {
-    padding: 2.5rem 0 1rem;
-    text-align: center;
+    min-height: 100svh;
+    padding-top: 0;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
+    position: static; /* so .hero-media anchors to the full-bleed .hero */
   }
 
-  .hero-sub {
-    margin-inline: auto;
+  .hero-media {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    align-self: stretch;
   }
 
   .hero-media img {
-    max-height: 66vh;
-    -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent);
-    mask-image: linear-gradient(to bottom, #000 82%, transparent);
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    object-fit: cover;
+    object-position: top center;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .hero-media::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(7, 13, 26, 0.35),
+      rgba(7, 13, 26, 0.05) 28%,
+      rgba(7, 13, 26, 0.45) 52%,
+      rgba(7, 13, 26, 0.88) 78%,
+      var(--bg)
+    );
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: calc(var(--nav-h) + 2rem) 0 2.8rem;
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 12vw, 4.4rem);
+  }
+
+  .hero-sub {
+    max-width: 24ch;
+    margin-bottom: 2.2rem;
+  }
+
+  .hero .btn-outline {
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    padding: 1.2rem 3.2rem;
+  }
+
+  .hero .btn-outline .btn-arrow {
+    position: absolute;
+    right: 1.5rem;
   }
 
   .hero-watermark {
-    font-size: 40vh;
+    display: none;
   }
 
   .navbar-links {
